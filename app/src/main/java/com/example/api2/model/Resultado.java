@@ -1,6 +1,6 @@
 package com.example.api2.model;
 
-public class Resultado {
+public class Resultado extends Resultados {
     private int id;
     private String url;
     private String link;

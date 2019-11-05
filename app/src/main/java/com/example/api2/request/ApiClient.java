@@ -10,7 +10,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 import retrofit2.http.GET;
 
 public class ApiClient {
-    private static final String PATH="https://apis.datos.gob.ar/georef/api/";
+    private static final String PATH="https://www.cultura.gob.ar/api/v2.0/";
     private static MyApiInterface myApiInterface;
 
     public static MyApiInterface getMyApiInterface(){
@@ -26,8 +26,8 @@ public class ApiClient {
 
     public interface MyApiInterface{
 
-
-        @GET("v2.0/museos/=")
+        String tipo="museos/";
+        @GET(tipo)
         Call<Resultado> leer();
 
     }
